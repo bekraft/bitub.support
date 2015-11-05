@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated p2 -->
+      <package
+            uri="platform:/resource/bitub.support.p21/model/p2.xsd"
+            class="bitub.support.p2.P2Package"
+            genModel="model/p2.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated p2 -->
+      <parser
+            type="target"
+            class="bitub.support.p2.util.P2ResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

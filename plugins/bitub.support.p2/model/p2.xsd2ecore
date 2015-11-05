@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd2ecore:XSD2EcoreMappingRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsd2ecore="http://www.eclipse.org/emf/2002/XSD2Ecore" inputs="../../bitub.support.p21/model/p2.xsd#/" outputs="P2.ecore#/"
+    topToBottom="true">
+  <nested inputs="bundleentry://2173.fwk127269549/cache/www.w3.org/2001/XMLSchema.xsd#//string;XSDSimpleTypeDefinition=9"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/unit;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="P2.ecore#//UnitType">
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/unit;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="P2.ecore#//UnitType/id"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/unit;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse=1"
+        outputs="P2.ecore#//UnitType/version"/>
+  </nested>
+  <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1/repository;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="P2.ecore#//RepositoryType">
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1/repository;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="P2.ecore#//RepositoryType/location"/>
+  </nested>
+  <nested inputs="bundleentry://2173.fwk127269549/cache/www.w3.org/2001/XMLSchema.xsd#//boolean;XSDSimpleTypeDefinition=10"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+  <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="P2.ecore#//LocationType">
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="P2.ecore#//LocationType/unit"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle=1"
+        outputs="P2.ecore#//LocationType/repository"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="P2.ecore#//LocationType/includeAllPlatforms"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse=1"
+        outputs="P2.ecore#//LocationType/includeConfigurePhase"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse=2"
+        outputs="P2.ecore#//LocationType/includeMode"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse=3"
+        outputs="P2.ecore#//LocationType/includeSource"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/location;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse=4"
+        outputs="P2.ecore#//LocationType/type"/>
+  </nested>
+  <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="P2.ecore#//LocationsType">
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle/locations;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="P2.ecore#//LocationsType/location"/>
+  </nested>
+  <nested inputs="bundleentry://2173.fwk127269549/cache/www.w3.org/2001/XMLSchema.xsd#//unsignedByte;XSDSimpleTypeDefinition=51"
+      outputs="http://www.eclipse.org/emf/2003/XMLType#//UnsignedByte"/>
+  <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition"
+      outputs="P2.ecore#//TargetType">
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDParticle/XSDModelGroup/XSDParticle"
+        outputs="P2.ecore#//TargetType/locations"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse"
+        outputs="P2.ecore#//TargetType/name"/>
+    <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration/XSDComplexTypeDefinition/XSDAttributeUse=1"
+        outputs="P2.ecore#//TargetType/sequenceNumber"/>
+  </nested>
+  <nested inputs="../../bitub.support.p21/model/p2.xsd#//target;XSDElementDeclaration"
+      outputs="P2.ecore#//DocumentRoot/target"/>
+</xsd2ecore:XSD2EcoreMappingRoot>

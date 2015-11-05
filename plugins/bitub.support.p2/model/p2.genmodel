@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/bitub.support.p2/src-gen" editDirectory="/bitub.support.p2.edit/src-gen"
+    editorDirectory="/bitub.support.p2.editor/src-gen" modelPluginID="bitub.support.p2"
+    modelName="p2" modelPluginClass="bitub.support.p2.P2Plugin" editPluginClass="bitub.support.p2.edit.P2EditPlugin"
+    editorPluginClass="bitub.support.p2.presentation.P2EditorPlugin" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" testsDirectory="/bitub.support.p2.tests/src-gen" testSuiteClass="bitub.support.p2.tests.P2AllTests"
+    importerID="org.eclipse.xsd.ecore.importer" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.xsd.ecore.importer">
+    <details key="createMap" value="true"/>
+  </genAnnotations>
+  <foreignModel>../../bitub.support.p21/model/p2.xsd</foreignModel>
+  <genPackages prefix="P2" basePackage="bitub.support" resource="XML" disposableProviderFactory="true"
+      multipleEditorPages="false" fileExtensions="target" ecorePackage="P2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="P2.ecore#//UnitVerificationState">
+      <genEnumLiterals ecoreEnumLiteral="P2.ecore#//UnitVerificationState/UNKNOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="P2.ecore#//UnitVerificationState/VERIFIED"/>
+      <genEnumLiterals ecoreEnumLiteral="P2.ecore#//UnitVerificationState/UPGRADED"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="P2.ecore#//VersionType"/>
+    <genClasses ecoreClass="P2.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference P2.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference P2.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference P2.ecore#//DocumentRoot/target"/>
+    </genClasses>
+    <genClasses ecoreClass="P2.ecore#//LocationsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference P2.ecore#//LocationsType/location"/>
+    </genClasses>
+    <genClasses ecoreClass="P2.ecore#//LocationType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference P2.ecore#//LocationType/unit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference P2.ecore#//LocationType/repository"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//LocationType/includeAllPlatforms"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//LocationType/includeConfigurePhase"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//LocationType/includeMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//LocationType/includeSource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//LocationType/type"/>
+      <genOperations ecoreOperation="P2.ecore#//LocationType/metadataRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="P2.ecore#//RepositoryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//RepositoryType/location"/>
+    </genClasses>
+    <genClasses ecoreClass="P2.ecore#//TargetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference P2.ecore#//TargetType/locations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//TargetType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//TargetType/sequenceNumber"/>
+      <genOperations ecoreOperation="P2.ecore#//TargetType/metadataRepositoryManager"/>
+    </genClasses>
+    <genClasses ecoreClass="P2.ecore#//UnitType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//UnitType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//UnitType/version"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute P2.ecore#//UnitType/state"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="P2.ecore#//IMetadataRepositoryManager"/>
+    <genClasses image="false" ecoreClass="P2.ecore#//IMetadataRepository"/>
+  </genPackages>
+</genmodel:GenModel>

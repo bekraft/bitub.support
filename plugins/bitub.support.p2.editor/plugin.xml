@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated p2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="bitub.support.p2.presentation.P2ModelWizardID"
+            name="%_UI_P2ModelWizard_label"
+            class="bitub.support.p2.presentation.P2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/P2ModelFile.gif">
+         <description>%_UI_P2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated p2 -->
+      <editor
+            id="bitub.support.p2.presentation.P2EditorID"
+            name="%_UI_P2Editor_label"
+            icon="icons/full/obj16/P2ModelFile.gif"
+            extensions="target"
+            class="bitub.support.p2.presentation.P2Editor"
+            contributorClass="bitub.support.p2.presentation.P2ActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="bitub.support.p2.editor.category"
+            name="P2 Target Platform">
+      </category>
+      <command
+            categoryId="bitub.support.p2.editor.category"
+            id="bitub.support.p2.editor.commands.commandGenerateMirrorPOM"
+            name="Generate POM mirror XML fragment">
+      </command>
+      <command
+            categoryId="bitub.support.p2.editor.category"
+            id="bitub.support.p2.editor.commands.commandVerifyInstallableUnit"
+            name="Verify target unit availability">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="bitub.support.p2.commands.MavenPOMMirrorGeneratorHandler"
+            commandId="bitub.support.p2.editor.commands.commandGenerateMirrorPOM">
+      </handler>
+      <handler
+            class="bitub.support.p2.commands.InstallableUnitValidationHandler"
+            commandId="bitub.support.p2.editor.commands.commandVerifyInstallableUnit">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <menu
+               label="P2 Target Platform">
+            <command
+                  commandId="bitub.support.p2.editor.commands.commandGenerateMirrorPOM"
+                  label="Generate POM mirror XML fragment"
+                  style="push"
+                  tooltip="Generates a POM.xml configuration section for tycho-p2-extras-plugin.">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <or>
+                        <instanceof
+                              value="bitub.support.p2.TargetType">
+                        </instanceof>
+                        <instanceof
+                              value="bitub.support.p2.LocationsType">
+                        </instanceof>
+                        <instanceof
+                              value="bitub.support.p2.LocationType">
+                        </instanceof>
+                     </or>
+                  </iterate>
+               </with>
+            </visibleWhen>
+                  
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               label="P2 Target Platform">
+            <command
+                  commandId="bitub.support.p2.editor.commands.commandGenerateMirrorPOM"
+                  label="Generate POM mirror XML fragment"
+                  style="push"
+                  tooltip="Generates a POM.xml configuration section for tycho-p2-extras-plugin.">
+               <visibleWhen
+                     checkEnabled="false">
+                  <with
+                        variable="selection">
+                     <iterate
+                           ifEmpty="false"
+                           operator="or">
+                        <or>
+                           <instanceof
+                                 value="bitub.support.p2.TargetType">
+                           </instanceof>
+                           <instanceof
+                                 value="bitub.support.p2.LocationsType">
+                           </instanceof>
+                           <instanceof
+                                 value="bitub.support.p2.LocationType">
+                           </instanceof>
+                       </or>
+                     </iterate>
+                  </with>
+               </visibleWhen>
+            </command>          
+            <command
+                  commandId="bitub.support.p2.editor.commands.commandVerifyInstallableUnit"
+                  label="Verify availability of target units"
+                  style="push"
+                  tooltip="Verify availability of target units against given repository">
+               <visibleWhen
+                     checkEnabled="false">
+                  <with
+                        variable="selection">
+                     <iterate
+                           ifEmpty="false"
+                           operator="or">
+                        <or>
+                           <instanceof
+                                 value="bitub.support.p2.TargetType">
+                           </instanceof>
+                           <instanceof
+                                 value="bitub.support.p2.LocationsType">
+                           </instanceof>
+                           <instanceof
+                                 value="bitub.support.p2.LocationType">
+                           </instanceof>
+                           <instanceof
+                                 value="bitub.support.p2.UnitType">
+                           </instanceof>
+                        </or>
+                     </iterate>
+                  </with>
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
